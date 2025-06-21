@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <LinearLayout
+        android:id="@+id/layout_timkiem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- SearchView -->
+        <SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Tìm kiếm..." />
+
+        <!-- RadioGroup: Tìm trọ / Ở ghép -->
+        <RadioGroup
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <RadioButton
+                android:id="@+id/rbtn_timtro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Tìm trọ" />
+
+            <RadioButton
+                android:id="@+id/rbtn_oghep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Ở ghép" />
+        </RadioGroup>
+
+        <!-- RadioButton: Tìm theo Tỉnh Huyện -->
+        <RadioButton
+            android:id="@+id/rbtn_tinhhuyen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Tìm theo Tỉnh/Huyện" />
+
+        <!-- Layout Tỉnh -->
+        <LinearLayout
+            android:id="@+id/li_tinh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tỉnh"
+                android:textColor="@color/color3"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spiner_tinh_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <!-- Layout Huyện -->
+        <LinearLayout
+            android:id="@+id/li_huyen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Huyện"
+                android:textColor="@color/color3"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spiner_huyen_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <!-- Nút Tìm Kiếm -->
+        <Button
+            android:id="@+id/btn_timkiem"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:text="Tìm Kiếm"
+            android:textColor="@color/color_white"
+            android:textAllCaps="false"
+            app:backgroundTint="#4CAF50" />
+    </LinearLayout>
+
+    <!-- Danh sách kết quả -->
+    <ListView
+        android:id="@+id/list_item_search"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:dividerHeight="1dp" />
+    <Button
+        android:id="@+id/btn_hien_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tìm lại"
+        android:visibility="gone" />
+
+
+</LinearLayout>
