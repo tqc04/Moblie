@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:installLocation="auto">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <application android:allowBackup="true" android:dataExtractionRules="@xml/data_extraction_rules" android:fullBackupContent="@xml/backup_rules" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:usesCleartextTraffic="true" android:theme="@style/Theme.FinalApp" android:largeHeap="true" android:hardwareAccelerated="true" android:requestLegacyExternalStorage="true" android:enableOnBackInvokedCallback="true" tools:targetApi="31">
+<!--        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/google_maps_key"/>-->
+
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- PayPal Activities -->
+        <activity android:name=".PayPalPaymentActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop"/>
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <service android:name="com.paypal.android.sdk.payments.PayPalService" android:exported="false" />
+
+        <activity android:name=".PostActivity" android:exported="true">
+            <!-- Các cấu hình thêm nếu cần -->
+        </activity>
+
+        <activity android:name=".ui.ggMap.MapsActivity3" android:label="@string/title_activity_maps3" android:launchMode="singleTop"/>
+        <activity android:name=".ui.ggMap.MapsActivity2" android:label="@string/title_activity_maps2" android:launchMode="singleTop"/>
+        <activity android:name=".UpdateDelete" android:launchMode="singleTop"/>
+        <activity android:name=".QLUser" android:launchMode="singleTop"/>
+        <activity android:name=".Admin" android:launchMode="singleTop"/>
+        <activity android:name=".QLBV" android:launchMode="singleTop"/>
+        <activity android:name=".ui.login.Register" android:launchMode="singleTop"/>
+        <activity android:name=".ui.login.Login" android:launchMode="singleTop"/>
+        <activity android:name=".ui.login.Reset" android:launchMode="singleTop"/>
+        <activity android:name=".Detail" android:launchMode="singleTop"/>
+        <activity android:name=".ui.login.ProfileActivity" android:launchMode="singleTop"/>
+        <activity android:name=".MainActivity0" android:launchMode="singleTop"/>
+        <activity android:name=".UpdateDeleteUser" android:launchMode="singleTop"/>
+
+
+        <activity android:name=".ui.post.PayPalWebViewActivity" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyButA9Hkdyg7NprGzsNTpgv9VcUKyUF-qk" />
+    </application>
+</manifest>

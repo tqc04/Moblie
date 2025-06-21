@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Ảnh -->
+        <ImageView
+            android:id="@+id/image_detail"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_image" />
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:id="@+id/doituong_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tiêu đề"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:textColor="#4CAF50" />
+
+        <!-- Mô tả -->
+        <TextView
+            android:id="@+id/mota_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mô tả"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
+        <!-- Hình thức -->
+        <TextView
+            android:id="@+id/hinhthuc_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hình thức: Cho thuê phòng trọ"
+            android:textSize="14sp"
+            android:paddingTop="4dp"
+            android:textColor="#000000" />
+
+        <!-- Địa chỉ -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_location"
+                android:tint="#666" />
+
+            <TextView
+                android:id="@+id/diachi_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Địa chỉ"
+                android:paddingStart="8dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xem bản đồ"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp" />
+
+
+        <!-- Tỉnh / Huyện -->
+        <TextView
+            android:id="@+id/tinh_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tỉnh: Hà Nội"
+            android:paddingTop="4dp" />
+
+        <TextView
+            android:id="@+id/huyen_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Huyện: Ba Đình" />
+
+        <!-- Giá + Diện tích -->
+        <TextView
+            android:id="@+id/gia_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Giá: 1.500.000 VND"
+            android:textColor="#F44336"
+            android:textStyle="bold"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/txt_dt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diện tích: 20 m²" />
+
+        <!-- Phân vùng -->
+        <TextView
+            android:id="@+id/tv_ttchutro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thông tin chủ trọ"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#03A9F4"
+            android:paddingTop="16dp" />
+
+        <!-- Tên -->
+        <TextView
+            android:id="@+id/ten_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên: ..." />
+
+        <!-- Điện thoại -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_phone"
+                android:tint="#444" />
+
+            <TextView
+                android:id="@+id/sdt_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SĐT: ..."
+                android:paddingStart="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
